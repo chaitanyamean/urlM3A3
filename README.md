@@ -24,7 +24,6 @@ We have implemented a long-polling mechanism to handle asynchronous image proces
 -   **ImageStatusService**: A centralized service that maps `imageId` to waiting `DeferredResult` objects.
 -   **ThumbnailQueueService**: The background worker that processes the image and notifies `ImageStatusService` upon completion.
 
-## Implementation Steps
 
 ### [Q1] 1. Database Changes
 - Modified `ImageEntity` to include a `status` field (PENDING, PROCESSING, COMPLETED, FAILED).
